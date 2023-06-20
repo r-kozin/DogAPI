@@ -21,10 +21,6 @@ const heightInfo = document.querySelector("#height-info");
 const weightInfo = document.querySelector("#weight-info");
 const defaultImage = document.querySelector("#default-image");
 
-
-// axios.defaults.headers.common["x-api-key"] =
-//   "live_USlnF9FIWN67IZvbFvmEefq79G9vHCyP4xssLDadB3ob5mpOAX6hMOUaRR2Jsw9R";
-
   axios.defaults.headers.common["x-api-key"] =
   "DEMO_API_KEY";
 
@@ -38,9 +34,7 @@ const data = {
 
 async function initialLoad() {
   try {
-    // axios.defaults.headers.common["x-api-key"] =
-    //   "live_USlnF9FIWN67IZvbFvmEefq79G9vHCyP4xssLDadB3ob5mpOAX6hMOUaRR2Jsw9R"; // Replace this with your API Key, as it's set to defaults it will be used from now onwards
-
+    
     let response = await axios.get("https://api.thedogapi.com/v1/breeds/");
     data.breeds = response.data;
     console.log("-- (" + data.breeds.length + ") Breeds from TheCatAPI.com");
