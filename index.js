@@ -37,7 +37,7 @@ async function initialLoad() {
     
     let response = await axios.get("https://api.thedogapi.com/v1/breeds/");
     data.breeds = response.data;
-    console.log("-- (" + data.breeds.length + ") Breeds from TheCatAPI.com");
+    console.log("-- (" + data.breeds.length + ") Breeds from TheDogAPI.com");
     for (let i = 0; i < data.breeds.length; i++) {
       const breed = data.breeds[i];
 
